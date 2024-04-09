@@ -179,7 +179,7 @@ hdoc::frontend::Frontend::Frontend(int argc, char** argv, hdoc::types::Config* c
 
       // If we have found the beginning of the include list, filter it to only lines that have include paths.
       if (searchListFound == true) {
-        if (line.startswith(" ")) {
+        if (line.starts_with(" ")) {
           cfg->includePaths.emplace_back(std::string(line.trim()));
         }
       }
